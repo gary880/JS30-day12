@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+<script>
+  const ans = [71,65,82,89,73,83,67,79,79,76]; //garyiscool
+  const input = [];
+  window.addEventListener('keyup',(e)=>{
+    console.log(input);
+    input.push(e.keyCode);
+    // if(input.length > ans.length){
+    //   input.shift();
+    // }
+    input.splice(0, input.length - ans.length);
+    if(input.join('') === ans.join('')){
+      console.log("I agree Gary is cool");
+      console.log(input);
+      cornify_add();
+    }
+  
+  });
+  
+
+
+
+</script>
+</body>
+</html>
